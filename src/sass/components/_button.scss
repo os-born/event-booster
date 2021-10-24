@@ -1,0 +1,116 @@
+.sign-btn-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  padding: 15px 10px;
+  z-index: 999999;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: row;
+    top: 0;
+    right: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.sign-btn {
+  font-style: 14px;
+  height: auto;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 12px 0;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    // width: 100px;
+    font-style: 16px;
+    height: 40px;
+    border-radius: 20px 0;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      // width: 150px;
+    }
+  }
+
+  background: rgba(5, 5, 5, 0);
+  color: $accent;
+  border: 1px solid $accent;
+  &:hover,
+  &:focus {
+    box-shadow: -5px 5px 5px 4px rgba(220, 86, 197, 0.5);
+    cursor: pointer;
+    color: $accent;
+  }
+}
+.card_button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: inherit;
+  color: $accent;
+  border: 1px solid $accent;
+  opacity: 0.5;
+  transition: transform 3000ms linear, opacity 1000ms;
+
+  &:hover,
+  &:focus {
+    border: none;
+    background: $accent;
+    color: #000;
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+.fav_button {
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: inherit;
+  color: #888;
+  border-color: transparent;
+  transition: transform 3000ms linear, opacity 1000ms;
+
+  &:hover,
+  &:focus {
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+.specials {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notiflix-loading-icon svg {
+  fill: aqua;
+}
+
+.isAdded {
+  color: #e2264d;
+  -webkit-filter: none;
+  filter: none;
+  will-change: font-size;
+  -webkit-animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}

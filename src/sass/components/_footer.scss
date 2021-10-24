@@ -1,0 +1,103 @@
+.footer {
+  background-color: $card-paragraph-text;
+}
+
+.footer > .container {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  text-align: center;
+  color: $secondary-text-color;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+
+  @media (min-width: $tablet) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.footer-text {
+  position: relative;
+  z-index: 100;
+
+  @media (max-width: $mobile-max) {
+    width: 252px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer-icon {
+  animation: heartbeat 1s infinite;
+  background-color: #ff2b58;
+  display: inline-block;
+  height: 10px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 63%;
+  top: 30%;
+  width: 10px;
+  @media (min-width: $tablet) {
+    left: 63%;
+    top: 40%;
+  }
+
+  @media (max-width: $mobile-max) {
+    left: 63%;
+    top: 40%;
+  }
+
+  @media (min-width: $desktop) {
+    left: 57.5%;
+    top: 40%;
+  }
+}
+
+.footer-icon:before,
+.footer-icon:after {
+  content: '';
+  background-color: #ff2b58;
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.footer-icon:before {
+  top: -5px;
+  left: 0;
+}
+
+.footer-icon:after {
+  left: 5px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  20% {
+    transform: scale(1.25) rotate(-45deg);
+  }
+  40% {
+    transform: scale(1.5) rotate(-45deg);
+  }
+}
+
+.footer-team {
+  margin-left: 30px;
+}
+
+.footer-team__name {
+  color: white;
+  text-decoration: none;
+}

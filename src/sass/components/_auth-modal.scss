@@ -1,0 +1,126 @@
+.bgS {
+  background-color: white;
+  max-width: 280px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 100px auto;
+  overflow-y: auto;
+  border-radius: 100px 0px 100px 0px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 580px;
+  }
+}
+.bgF {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 100px auto;
+  overflow-y: auto;
+  border-radius: 100px 0px 100px 0px;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.mui-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #dc56c5;
+  margin-top: 50px;
+}
+
+// .auth-hidden {
+//   display: none;
+// }
+
+.creating-acc {
+  font-size: 16px;
+}
+
+#mui-overlay {
+  background-color: rgba(32, 13, 29, 0.6);
+}
+
+.fav-title {
+  display: block;
+  color: white;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.fav-text {
+  display: block;
+  color: white;
+  padding: 100px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.dbe {
+  opacity: 0;
+}
+
+.fav-btnClose {
+  display: block;
+  height: auto;
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: end;
+}
+
+#map {
+  max-width: 280px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 100px auto;
+  overflow-y: auto;
+  border-radius: 10px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    max-width: 580px;
+  }
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+}

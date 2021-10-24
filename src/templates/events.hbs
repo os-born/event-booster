@@ -1,0 +1,20 @@
+{{#each this}}
+<li class='event-card' data-id='{{id}}'>
+    <div class="rose-border"></div>
+    <div class="img-trumb">
+    <img class="event-img" alt='{{name}}' loading = "lazy"
+    src="{{images.9.url}}"/>
+ </div>
+    <div class="event-info">
+        <h2 class="event-name">{{name}}</h2>
+        <h3 class ="event-data">{{dates.start.localDate}}</h3>
+    {{#if _embedded.venues.0.name}} 
+        <span class="location" data-long='{{_embedded.venues.0.location.longitude}}' data-lati ='{{_embedded.venues.0.location.latitude}}'>
+          {{_embedded.venues.0.name}}</span>
+    {{/if}}
+    </div>
+  
+    <button id="favorite" class="fav_button">❤</button>
+    
+</li>
+{{/each}}

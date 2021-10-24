@@ -1,7 +1,20 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+@import './base/common';
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/placeholders';
+@import './utils/placeholders';
+@import './base/container';
+@import './components/body-decoration-elements';
+@import './components/events-list';
+@import './components/header';
+@import './components/header-title';
+@import './components/section-cards';
+@import './components/logo';
+@import './components/footer';
+@import './components/lightbox';
+@import './components/search-fields';
+@import './components/team-modal';
+@import './components/button';
+@import './components/auth-modal';
+@import './components/go-top';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';

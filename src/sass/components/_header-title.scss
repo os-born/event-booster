@@ -1,0 +1,27 @@
+.hero-title {
+  @extend %hero-title;
+  display: block;
+  width: 212px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-shadow:-1px 0px 0 rgb(193,75,172),-2px 0px 0 rgb(161, 57, 144),-3px 0px 0 rgb(126, 50, 112),-4px 0px 0 rgb(112, 41, 100),-5px 0px 0 rgb(102, 37, 90),-6px 0px 0 rgb(99, 39, 88),-7px 0px 0 rgb(97, 51, 89),-8px 0px 1px rgba(90, 14, 76, 0.25);
+  -webkit-text-shadow:-1px 0px 0 rgb(193,75,172),-2px 0px 0 rgb(165,65,148),-3px 0px 0 rgb(138,54,123),-4px 0px 0 rgb(110,43,99),-5px 0px 0 rgb(83,32,74),-6px 0px 0 rgb(55,22,49),-7px 0px 0 rgb(28,11,25),-8px 0px 1px rgba(0,0,0,0.25);
+  -moz-text-shadow:-1px 0px 0 rgb(193,75,172),-2px 0px 0 rgb(165,65,148),-3px 0px 0 rgb(138,54,123),-4px 0px 0 rgb(110,43,99),-5px 0px 0 rgb(83,32,74),-6px 0px 0 rgb(55,22,49),-7px 0px 0 rgb(28,11,25),-8px 0px 1px rgba(0,0,0,0.25);
+  color:#dc56c5;;
+  
+
+  @media screen and (min-width: $tablet) {
+    width: 353px;
+    margin-bottom: 27px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 600px;
+    margin-bottom: 52px;
+    font-size: 50px;
+    line-height: 61px;
+  }
+}

@@ -1,0 +1,15 @@
+.logo-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background: linear-gradient(
+    136.07deg,
+    rgba(196, 196, 196, 0.03) 10.75%,
+    rgba(196, 196, 196, 0) 92.33%
+  );
+  opacity: 0.8;
+}

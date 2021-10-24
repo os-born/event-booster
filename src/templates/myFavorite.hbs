@@ -1,0 +1,31 @@
+<div class="bgF">
+    <div class="flex">
+        <button type="button" class="fav-btnClose">✕
+            <svg width="25px" height="25px" aria-label="Закрытие" class="fav-icon-close">
+            <use href="../images/symbol-defs.svg#icon-close-40px"></use>
+            </svg>
+        </button>
+    </div>
+    <h2 class="fav-title">My favorite</h2>
+    <ul class="fav-events">
+        {{#each this}}
+        <li class='event-card  fav' data-id='{{id}}'>
+            <div class="rose-border"></div>
+            <div class="img-trumb">
+                <img class="event-img" alt='{{name}}' loading="lazy" src="{{images.0.url}}" />
+            </div>
+            <div class="event-info">
+                <h2 class="event-name">{{name}}</h2>
+                <h3 class="event-data">{{dates.start.localDate}}</h3>
+                {{#if _embedded.venues.0.name}}
+                <span class="location" id='{{id}}'>
+                    {{_embedded.venues.0.name}}</span>
+                {{/if}}
+            </div>
+            <button id="favorite" class="fav_button isAdded" >❤</button>
+          
+        </li>
+        {{/each}}
+    </ul>
+    <button class="card_button login-out">Log out</button>
+</div>

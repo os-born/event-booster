@@ -1,0 +1,48 @@
+#go-top {
+  position: fixed;
+  z-index: 105;
+  bottom: 50px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+//   border: 2px solid $accent;
+  &:hover {
+    -webkit-box-shadow: 0px 0px 5px 4px rgba(220, 86, 197, 0.5);
+    -moz-box-shadow: 0px 0px 5px 4px rgba(220, 86, 197, 0.5);
+    box-shadow: 0px 0px 5px 4px rgba(220, 86, 197, 0.5);
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 28%;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid $accent;
+    border-bottom: 2px solid $accent;
+    animation: arrow 2s linear infinite;
+  }
+  &:after {
+    animation: arrow 2s linear infinite -1s;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 28px) rotate(135deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 17px) rotate(135deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 6px) rotate(135deg);
+  }
+}

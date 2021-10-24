@@ -3,19 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <title>Event Booster</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    #map {
+      height: 400px;
+      width: 300px;
+    }
+  </style> 
+</head>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+  <body>
+
+   <!-- <div class="local lightbox">
+     <div class="map-container"> 
+      <button type="button" class="fav-btnClose map-close">✕
+        <svg width="25px" height="25px" aria-label="Закрытие" class="fav-icon-close">
+          <use href="./images/symbol-defs.svg#icon-close-40px"></use>
+        </svg>
+      </button>
+        </button>
+        <div id="map"></div>
+        </div>
+
+    </div> -->
+
+    <!-- 
+      <a class="map-close">
+        <svg width="40px" height="40px" aria-label="Закрытие">
+          <use href="./images/symbol-defs.svg#icon-close-40px"></use>
+        </svg>
+      </a>
+    <div id="map"></div>
+     -->
+    
+    import {local} from "./js/components/modal.js"
+    import {refs} from '../src/js/refs.js'
+    <!-- <div id="map"></div> -->
+    <!-- <script>
+      
+      function initMap(lat, lng) {
+        let position = { lat: lat, lng: lng };
+        let opt = {
+          center: position,
+          zoom: 14,
+      }
+      
+       map = new google.maps.Map(document.getElementById("map"), opt);
+      const marker = new google.maps.Marker({
+         position,
+         map,
+        });
+    }
+    </script> -->
+    
+    <!-- <script  src="https://maps.googleapis.com/maps/api/js?key={key}&callback=initMap&v=weekly" async></script> -->
+
+    <include src="./partials/header.html"></include>
+    <include src="./partials/main.html"></include>
+    <include src="./partials/footer.html"></include>
+  
+    <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/calendar/1.0.0/lib/main-widget.js"></script>
     <script src="./index.js"></script>
+    <script src="//cdn.muicss.com/mui-0.10.3/extra/mui-combined.min.js"></script>
+   
   </body>
 </html>

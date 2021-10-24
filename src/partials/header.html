@@ -1,0 +1,68 @@
+<header class="header">
+  <div class="header-content container">
+    <div class="logo">
+      <a href="">
+        <img
+          class="logo-img"
+          alt="logo"
+          src="./images/logo/logo-mobile.png"
+          srcset="
+            ./images/logo/logo-mobile.png    107w,
+            ./images/logo/logo-mobile@2x.png 214w,
+            ./images/logo/logo-tab.png       180w,
+            ./images/logo/logo-tab@2x.png    360w,
+            ./images/logo/logo-desk.png      238w,
+            ./images/logo/logo-desk@2x.png   476w
+          "
+          sizes="(min-width: 1280px) 18vw, (min-width: 768px) 23vw, (min-width: 320px) 33vw, 25vw"
+        />
+      </a>
+    </div>
+    <h1 class="hero-title">FIND BEST EVENTS AROUND THE WORLD</h1>
+    <form class="searchForm">
+      <fieldset class="hero-field-container">
+        <div class="hero-field">
+          <input
+            type="text"
+            name="searchEvent"
+            placeholder="Start searching"
+            class="hero-input search-input"
+          />
+          <svg class="input-icon" width="12px" height="12px">
+            <use href="./images/symbol-defs.svg#vector"></use>
+          </svg>
+        </div>
+        <div class="hero-field">
+          <select class="hero-input choose-country-input js-select2" name="countryName" style="appearance: none"></select>
+          <svg class="input-icon" width="15px" height="10px">
+            <use href="././images/symbol-defs.svg#polygon"></use>
+          </svg>
+        </div>
+      </fieldset>
+    </form>
+    <div class="sign-btn-container"> 
+    <button type="button" class="sign-btn calendar-btn">Events calendar</button>
+    <button type="button" class="auth-btn sign-btn logsBtn">My favorite</button>
+    
+    </div>
+  
+     
+   
+
+<!-- секция кнопки Events calendar -->
+    <section>
+      <div class="hide-calendar calendar">
+        <button class="close-calender"><svg width="25px" height="25px" aria-label="Закрытие" class="icon-close-calender">
+          <use href="./images/symbol-defs.svg#icon-close-40px"></use>
+        </svg></button>
+        <div id='main-calendar' w-type="calendar" w-tmapikey="9tvGazI5GRqdFrE6bp2dWyynwysgf3qO" w-googleapikey="{key}" w-keyword="" w-theme="calendar" w-colorscheme="dark" w-width="250" w-height="350" w-size="25" w-border="1" w-borderradius="4" w-postalcode="" w-radius="25" w-countrycode="US" w-city="Los Angeles" w-period="week" w-periodweek="week" w-layout="vertical" w-classificationid="" w-attractionid="" w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" w-proportion="standart" w-latlong=""></div>
+      </div>
+    </section>
+      
+    <div class="header-gradient"></div>
+  </div>
+
+
+
+
+</header>

@@ -1,0 +1,129 @@
+
+<div class='modal-event-card' id='modal_product' data-event>
+  <div class='event-content-icon'>
+    <img
+      class='event-content-icon__image'
+      src='{{images.9.url}}'
+      alt='{{name}}'
+      title='{{name}}'
+    />
+
+  </div>
+
+  <div class='modal-detalis-event'>
+    <div class='modal-detalis-event__wrapper'>
+      <img
+        class='modal-detalis-event__wrapper--img'
+        src='{{images.9.url}}'
+        alt='{{name}}'
+        title='{{name}}'
+      />
+    </div>
+
+    <div class='modal-info-event'>
+      <div class='modal-info-event__wraper'>
+        <h2 class='event-info__title'>INFO</h2>
+       
+          {{!-- {{#if eventFullInfo}}
+            <p class='event-info__text shortInfo'>{{eventInfo}}</p><pre>ellipsis</pre>
+            <p class='event-info__text fullInfo'>{{eventFullInfo}}</p>
+          {{else}} --}}
+            <p class='event-info__text shortInfo'>{{info}}</p>
+          {{!-- {{/if}} --}}
+       
+
+      </div>
+      <div class='modal-info-event__wraper'>
+        <h2 class='event-info__title'>WHEN</h2>
+        <p class='event-info__text'>{{dates.start.localDate}}</p>
+        <p class='event-info__text'>{{dates.start.localTime}}
+          ({{dates.timezone}})
+          
+
+        </p>
+      </div>
+      <div class='event_place'>
+        <h2 class='event-info__title'>WHERE</h2>
+        {{#each this._embedded.venues}}
+        <p class='event-info__text'>{{city.name}},
+          {{country.name}}</p>
+        <p class='event-info__text'>{{venue}}</p>
+        {{/each}}
+      </div>
+    
+        <div class='event_headliner'>
+          <h2 class='event-info__title'>WHO</h2>
+
+          <p class='event-info__text'>{{name}}</p>
+
+        </div>
+       
+      
+
+      {{#if priceRanges}}
+        <div class='event_price'>
+          <h2 class='event-info__title'>PRICES</h2>
+
+          <div class='event_price_container'>
+            <svg
+              class='event_price_svg'
+              version='1.1'
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='16'
+              viewBox='0 0 45 32'
+            >
+              <title>ticket1</title>
+              <path d='M5.020 1.569h-5.020v30.118h5.020v-30.118z'></path>
+              <path d='M17.645 1.569h-5.020v30.118h5.020v-30.118z'></path>
+              <path d='M25.25 1.569h-5.019v30.118h5.019v-30.118z'></path>
+              <path d='M45.176 1.569h-7.453v30.118h7.453v-30.118z'></path>
+              <path d='M10.039 1.569h-2.434v30.118h2.434v-30.118z'></path>
+              <path d='M30.118 1.569h-2.434v30.118h2.434v-30.118z'></path>
+              <path d='M35.137 1.569h-2.434v30.118h2.434v-30.118z'></path>
+            </svg>
+            <p class='event-info__text'>Standart
+              {{priceRanges.0.min}}-{{priceRanges.0.max}}
+              {{priceRanges.0.currency}}</p>
+
+          </div>
+          <a class='buy-tickets-link' href='{{url}}'><span
+              class='buy_tickets'
+              
+            >BUY TICKETS</span></a>
+          {{#if priceRanges.1.currency}}
+            <div class='event_price_container'>
+              <svg
+                class='event_price_svg'
+                version='1.1'
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='16'
+                viewBox='0 0 45 32'
+              >
+                <title>ticket1</title>
+                <path d='M5.020 1.569h-5.020v30.118h5.020v-30.118z'></path>
+                <path d='M17.645 1.569h-5.020v30.118h5.020v-30.118z'></path>
+                <path d='M25.25 1.569h-5.019v30.118h5.019v-30.118z'></path>
+                <path d='M45.176 1.569h-7.453v30.118h7.453v-30.118z'></path>
+                <path d='M10.039 1.569h-2.434v30.118h2.434v-30.118z'></path>
+                <path d='M30.118 1.569h-2.434v30.118h2.434v-30.118z'></path>
+                <path d='M35.137 1.569h-2.434v30.118h2.434v-30.118z'></path>
+              </svg>
+
+              <p class='event_price_text'>VIP
+                {{priceRanges.1.min}}-{{priceRanges.1.max}}
+                {{priceRanges.1.currency}}</p>
+            </div>
+            <a class='buy-tickets-link' href='{{url}}'><span
+                class='buy_tickets'
+                data-id='{{id}}'
+              >BUY TICKETS</span></a>
+          {{/if}}
+
+
+        </div>
+      {{/if}}
+    </div>
+
+  </div>

@@ -1,0 +1,262 @@
+body {
+  background-color: #0e0e0e;
+}
+
+@media screen and (min-width: $tablet) {
+  %big-circle {
+    content: ' ';
+
+    display: block;
+    position: absolute;
+    z-index: -1;
+
+    width: 126px;
+    height: 126px;
+
+    border: 1px solid $body-decoration-el-color;
+    background-color: $card-paragraph-text;
+
+    border-radius: 50%;
+  }
+
+  %small-circle {
+    content: ' ';
+
+    display: block;
+    position: absolute;
+    z-index: 1;
+
+    width: 80px;
+    height: 80px;
+
+    background: linear-gradient(
+        151.61deg,
+        rgba(196, 196, 196, 0.03) -7.48%,
+        rgba(196, 196, 196, 0) 106.62%
+      )
+      $card-paragraph-text;
+
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+  }
+
+  %square {
+    content: ' ';
+
+    display: block;
+    position: absolute;
+    z-index: -1;
+
+    width: 238px;
+    height: 238px;
+
+    border: 1px solid $body-decoration-el-color;
+  }
+
+
+  header:before {
+    @extend %big-circle;
+
+    bottom: -260px;
+    left: 155px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+  header::after {
+    @extend %small-circle;
+
+    bottom: -238px;
+    left: 178px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(10):before {
+    @extend %square;
+
+    border-radius: 0 100% 0 0;
+
+    left: -60px;
+    bottom: -70px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(9):before {
+    @extend %square;
+
+    border-radius: 0 100% 0 0;
+
+    left: -140px;
+    bottom: -135px;
+
+    width: 335px;
+    height: 335px;
+
+    @media screen and (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+
+  // left bottom cicles
+
+  footer .container {
+    position: relative;
+    z-index: 100;
+  }
+
+  footer .container::before {
+    @extend %big-circle;
+
+    height: 63px;
+
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-bottom: none;
+
+    bottom: 0px;
+    left: -65px;
+
+    @media screen and (min-width: $desktop) {
+      left: -110px;
+
+      width: 216px;
+      height: 108px;
+    }
+  }
+
+  footer .container::after {
+    @extend %small-circle;
+
+    height: 40px;
+
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-bottom: none;
+
+    bottom: 0px;
+    left: -40px;
+
+    @media screen and (min-width: $desktop) {
+      bottom: 0px;
+      left: -70px;
+
+      width: 136px;
+      height: 65px;
+    }
+  }
+
+
+  .events-gallery > li:nth-child(6):before {
+    @extend %square;
+
+    border-radius: 100% 0 0 0;
+
+    bottom: -27px;
+    right: -50px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(4):before {
+    @extend %square;
+
+    border-radius: 100% 0 0 0;
+
+    top: 100px;
+    right: -130px;
+
+    width: 335px;
+    height: 335px;
+
+    @media screen and (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(11):before {
+    @extend %big-circle;
+
+    bottom: 90px;
+    right: -255px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(11)::after {
+    @extend %small-circle;
+
+    bottom: 114px;
+    right: -232px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(12):before {
+    @extend %big-circle;
+
+    bottom: -35px;
+    right: -165px;
+
+    width: 216px;
+    height: 216px;
+
+    @media screen and (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(12)::after {
+    @extend %small-circle;
+
+    bottom: 5px;
+    right: -125px;
+
+    width: 136px;
+    height: 136px;
+
+    @media screen and (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+
+
+  .events-gallery > li:nth-child(21)::before {
+    @extend %square;
+
+    border-radius: 100% 0 0 0;
+
+    bottom: 25px;
+    right: -50px;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .events-gallery > li:nth-child(20):before {
+    @extend %square;
+
+    border-radius: 100% 0 0 0;
+
+    bottom: -80px;
+    right: -130px;
+
+    width: 335px;
+    height: 335px;
+
+    @media screen and (max-width: $tablet-max) {
+      display: none;
+    }
+  }
+}

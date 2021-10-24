@@ -1,0 +1,229 @@
+@import './utils/placeholders';
+
+.events > .container {
+  padding-bottom: 60px;
+  margin-top: -45px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: -10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: -15px;
+  }
+}
+
+.events-gallery {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.event-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  width: 128px;
+  min-height: 231px;
+  margin-bottom: 33px;
+  position: relative;
+  cursor: pointer;
+  transition: $timing-function;
+  @media (min-width: $mobile) {
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: 194px;
+    min-height: 312px;
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 196px;
+    &:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card:hover .img-trumb {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+    0 0 20px $main-pulsar-color, 0 0 15px $main-pulsar-color,
+    0 0 30px $main-pulsar-color, 0 0 20px $main-pulsar-color,
+    0 0 5px $main-pulsar-color;
+  animation-name: pulsate;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.event-card:hover .event-name {
+  color: $main-body-color;
+  text-shadow: $hero-text-color 0px 0px 5px, $hero-text-color 0px 0px 10px,
+    $hero-text-color 0px 0px 15px, $hero-text-color 0px 0px 20px;
+  animation-name: pulsate-text;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.rose-border {
+  position: absolute;
+  width: 109px;
+  height: 101px;
+  right: -10px;
+  top: -9px;
+
+  border: 1px solid $rose-border-color;
+  border-radius: 50px 0px;
+
+  @media (min-width: $tablet) {
+    right: 0px;
+
+    width: 153px;
+    height: 143px;
+  }
+}
+
+.img-trumb {
+  height: 161px;
+  width: 128px;
+  border-radius: 50% 0 50% 0;
+  overflow: hidden;
+  transition: $timing-function;
+
+  @media (min-width: $tablet) {
+    height: 227px;
+    width: 180px;
+  }
+}
+
+.img-trumb > img {
+  position: relative;
+  z-index: 100;
+
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.event-info {
+  position: relative;
+  z-index: 100;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+}
+
+.event-name {
+  @extend %event-name-text;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.event-data {
+  @extend %event-date-text;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.location {
+  @extend %event-place-text;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.location::before {
+  content: url('../images/geo.png');
+  fill: $main-text-color;
+  display: inline-block;
+  width: 7px;
+  height: 10px;
+  margin-right: 3px;
+}
+
+.error-text {
+  @extend %event-name-text;
+  margin-top: 100px;
+  margin-bottom: 5px;
+
+  flex-grow: 1;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 1px $main-text-color, 0 0 2px $main-text-color,
+      0 0 3px $main-text-color, 0 0 4px $main-pulsar-color,
+      0 0 3px $main-pulsar-color, 0 0 6px $main-pulsar-color,
+      0 0 4px $main-pulsar-color, 0 0 1px $main-pulsar-color;
+  }
+  100% {
+    box-shadow: 0 0 5px $main-text-color, 0 0 10px $main-text-color,
+      0 0 15px $main-text-color, 0 0 20px $main-pulsar-color,
+      0 0 15px $main-pulsar-color, 0 0 30px $main-pulsar-color,
+      0 0 20px $main-pulsar-color, 0 0 5px $main-pulsar-color;
+  }
+}
+
+@keyframes pulsate-text {
+  0% {
+    text-shadow: 0 0 1px $main-text-color, 0 0 2px $main-text-color,
+      0 0 3px $main-text-color, 0 0 4px $main-pulsar-color,
+      0 0 3px $main-pulsar-color, 0 0 6px $main-pulsar-color,
+      0 0 4px $main-pulsar-color, 0 0 1px $main-pulsar-color;
+  }
+  100% {
+    text-shadow: 0 0 5px $main-text-color, 0 0 10px $main-text-color,
+      0 0 15px $main-text-color, 0 0 20px $main-pulsar-color,
+      0 0 15px $main-pulsar-color, 0 0 30px $main-pulsar-color,
+      0 0 20px $main-pulsar-color, 0 0 5px $main-pulsar-color;
+  }
+}
+
+.events-root-container {
+  overflow: visible;
+}
+div[w-theme='simple'] {
+  overflow: visible;
+}
+
+div[w-theme='simple'] .events-root-container {
+  overflow: visible;
+}
